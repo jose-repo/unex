@@ -1,5 +1,5 @@
-00/**
- * Creamos los constructores parametrizados
+/**
+ * Creamos los constructores parametrizados -
  */
 
 public class Bicicleta extends Bicicleta1
