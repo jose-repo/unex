@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Bicicleta
+comment0.text=\r\n\ Creamos\ los\ constructores\ parametrizados\r\n
+comment1.params=nombre\ peso\ velocidad\ habilidad\ dificultad
+comment1.target=Bicicleta(java.lang.String,\ double,\ double,\ int,\ int)
+comment10.params=habilidad
+comment10.target=void\ setHabilidad(int)
+comment11.params=dificultad
+comment11.target=void\ setDificultad(int)
+comment2.params=
+comment2.target=java.lang.String\ getNombre()
+comment3.params=
+comment3.target=double\ getPeso()
+comment4.params=
+comment4.target=double\ getVelocidad()
+comment5.params=
+comment5.target=int\ getHabilidad()
+comment6.params=
+comment6.target=int\ getDificultad()
+comment7.params=nombre
+comment7.target=void\ setNombre(java.lang.String)
+comment8.params=peso
+comment8.target=void\ setPeso(double)
+comment9.params=velocidad
+comment9.target=void\ setVelocidad(double)
+numComments=12

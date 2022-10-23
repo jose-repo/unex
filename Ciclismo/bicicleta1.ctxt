@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=bicicleta1
+comment1.params=
+comment1.target=int\ getpesoBicicleta()
+comment2.params=c\ e
+comment2.target=double\ hallarVelocidad(Ciclista,\ Etapa)
+comment3.params=c\ e
+comment3.target=double\ tiempoNecesario(Ciclista,\ Etapa)
+numComments=4
