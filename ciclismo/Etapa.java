@@ -1,10 +1,12 @@
+package ciclismo;
+
 /**
  * Write a description of class Etapa here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Etapa extends bicicleta1
+public class Etapa
 {
     // instance variables - replace the example below with your own
     private String nombre;
@@ -45,12 +47,14 @@ public class Etapa extends bicicleta1
     public void setDistancia(int distancia){
         this.distancia=distancia;
     }
-    
 
-    public void mostrar(){
-        System.out.println(getNombre());
-        System.out.println(getDificultad());
-        System.out.println(getDistancia());
+
+    @Override
+    public String toString() {
+        return "Etapa{" +
+                "nombre='" + nombre + '\'' +
+                ", dificultad=" + dificultad +
+                ", distancia=" + distancia +
+                '}';
     }
-    
 }
