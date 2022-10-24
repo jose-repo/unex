@@ -1,4 +1,4 @@
-package ciclismo;
+
 /**
  * Write a description of class Ciclista here.
  *
@@ -6,16 +6,19 @@ package ciclismo;
  * @version (a version number or a date)
  */
 
-import java.util.HashMap;
-import java.util.Map;
+package ciclismo;
+import Resultado.Resultado;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Ciclista {
     private String nombreCiclista;
-    private String bicicletaCiclista;
+
     private int habilidadCiclista;
     private double energiaCiclista;
 
-    private Map<Etapa, Integer> mapEtapasResultado = new HashMap<>();
+    private List<Resultado> ResultadosCiclista = new ArrayList<>();
     private String equipoCiclista;
 
 
@@ -27,6 +30,7 @@ public class Ciclista {
         this.nombreCiclista = nombreCiclista;
         this.habilidadCiclista = habilidadCiclista;
         this.energiaCiclista = energiaCiclista;
+        this.ResultadosCiclista = new ArrayList<Resultado>();
     }
 
     public String getNombreCiclista() {
@@ -35,14 +39,6 @@ public class Ciclista {
 
     public void setNombreCiclista(String nombreCiclista) {
         this.nombreCiclista = nombreCiclista;
-    }
-
-    public String getBicicletaCiclista() {
-        return bicicletaCiclista;
-    }
-
-    public void setBicicletaCiclista(String bicicletaCiclista) {
-        this.bicicletaCiclista = bicicletaCiclista;
     }
 
     public int getHabilidadCiclista() {
@@ -69,6 +65,15 @@ public class Ciclista {
         this.equipoCiclista = equipoCiclista;
     }
 
+
+    public List<Resultado> getResultadosCiclista() {
+        return ResultadosCiclista;
+    }
+
+    public void setResultadosCiclista(List<Resultado> resultadosCiclista) {
+        ResultadosCiclista = resultadosCiclista;
+    }
+
     public boolean abandonarEtapa() {
         boolean abandono = false;
         if (energiaCiclista <= 0) {
@@ -79,38 +84,33 @@ public class Ciclista {
 
     }
 
-    public void gestionarResultados(Etapa e) {
-        Integer resultado = mapEtapasResultado.get(e);
-        System.out.println("El tiempo resultado de la etapa " + e.getNombre() + "es " + resultado);
+
+
+    public int getTotalEtapas() {
+        return ResultadosCiclista.size();
     }
 
-    public int totalEtapas() {
-        return mapEtapasResultado.size();
+    public void calcularResultado(Etapa e){
+        Resultado r = new Resultado(e, 100);
+        this.ResultadosCiclista.add(r);
 
     }
 
-    public int totaltiempo() {
-        int totalTiempo = 0;
-        for (Map.Entry<Etapa, Integer> entry : mapEtapasResultado.entrySet()) {
-            System.out.println(entry.getKey().getNombre() + " : " + entry.getValue());
-            totalTiempo += entry.getValue();
+    public void mostrarResultadosCiclista(){
+        for (Resultado r : ResultadosCiclista){
+            System.out.println(r);
         }
-        return totalTiempo;
     }
 
     @Override
     public String toString() {
         return "Ciclista{" +
                 "nombreCiclista='" + nombreCiclista + '\'' +
-                ", bicicletaCiclista='" + bicicletaCiclista + '\'' +
                 ", habilidadCiclista=" + habilidadCiclista +
                 ", energiaCiclista=" + energiaCiclista +
-                ", mapEtapasResultado=" + mapEtapasResultado +
                 ", equipoCiclista='" + equipoCiclista + '\'' +
                 '}';
     }
 }
-
-
 
 
